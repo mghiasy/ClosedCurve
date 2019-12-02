@@ -1,6 +1,6 @@
 package lab2.prog2_2;
 
-public final class Triangle{  
+public final class Triangle  extends ClosedCurve{  
 
 /** base and height variables are defined so that height <= base */
 	private final double base;
@@ -17,7 +17,7 @@ public final class Triangle{
 		}
 	}
 	
-	
+	@Override
 	public String computeArea() {
 		//return (0.5 * base * height);
 		double area= 0.5 * base * height;

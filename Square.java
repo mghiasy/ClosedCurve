@@ -1,6 +1,6 @@
 package lab2.prog2_2;
 
-public final class Square{
+public final class Square  extends ClosedCurve{
 	private final double side;
 
 	public Square(double side) {
@@ -8,6 +8,7 @@ public final class Square{
 
 	}
 	
+	@Override
 	public String computeArea() {
 		// return side * side;
 		double area = side * side;
