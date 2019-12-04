@@ -1,11 +1,6 @@
-package lab2.prog2_2;
+package ClosedCurve_ver1;
+//DEVELOP WITH INHERITANCE USE ABSTRACT CLASS AND METHOD
+abstract public class ClosedCurve {
+	abstract double computeArea();
 
-//CANNOT INSTANTIATE ABSTRACT CLASS
-//WHEN THERE IS ATLEAST 1 ABSTRACT METHOD, THE CLASS SHOULD BE ABSTRACT
-public abstract class ClosedCurve {
-
-	//ABSTRACT METHOD IS NOT ACUTALLY IMPLEMENTED IN CURRENT CLASS
-	//IT USED TO ONLY BE OVERRIDDEN IN SUBCLASSES
-	//IT CANNOT HAVE BODY,IT CAN ONLE BE DECLARED
-	public abstract String computeArea();
 }
