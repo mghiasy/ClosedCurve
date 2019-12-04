@@ -11,8 +11,8 @@ public class Test {
 								 };
 		//compute areas
 		for(ClosedCurve cc : objects) {
-			System.out.println(cc.computeArea());
-			
+			String ret = "The area of this "+ cc.getClass().getSimpleName()+" is :"+ cc.computeArea()+"\n";
+			System.out.println(ret);	
 		}
     
 	}
