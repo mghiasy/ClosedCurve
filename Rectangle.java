@@ -1,6 +1,6 @@
-package ClosedCurve_ver1;
+package ClosedCurve_ver2;
 
-public class Rectangle extends ClosedCurve {
+public class Rectangle extends ClosedCurve implements Polygon {
 	private double width;
 	private double length;
 	
@@ -24,5 +24,13 @@ public class Rectangle extends ClosedCurve {
 	@Override
 	public double computeArea() {
 		return width * length;
+	}
+	@Override
+	public int getNumberOfSides() {
+		return 04;
+	}
+	@Override
+	public double computePerimeter() {
+		return 2*(width + length);
 	}
 }

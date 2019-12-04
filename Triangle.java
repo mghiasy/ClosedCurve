@@ -1,15 +1,15 @@
-package ClosedCurve_ver1;
+package ClosedCurve_ver2;
 
 import java.util.Arrays;
 
-public final class Triangle extends ClosedCurve {
+public final class Triangle extends ClosedCurve implements Polygon {
 	/** base and height variables are defined so that height <= base */
 	private final double base;
 	private final double height;
 
 	@SuppressWarnings("unused")
 	/** sides of the triangle, defined so that side1 <= side2 <= side3 */
-	private final double side1, side2, side3;
+	 private final double side1, side2, side3;
 
 	private static final double DEFAULT_SIDE = 5.0;
 
@@ -82,7 +82,18 @@ public final class Triangle extends ClosedCurve {
 	}
 
 	public double computeArea() {
-		 return (0.5 * base * height);
-		//return side1 + side2 + side3;
+		return (0.5 * base * height);
+		// return side1 + side2 + side3;
+	}
+
+	@Override
+	public int getNumberOfSides() {
+		return 3;
+	}
+
+	@Override
+	public double computePerimeter() {
+		// TODO Auto-generated method stub
+		return side1 + side2 + side3;
 	}
 }

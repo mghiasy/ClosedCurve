@@ -1,5 +1,5 @@
-package ClosedCurve_ver1;
-//DEVELOP WITH INHERITANCE USE ABSTRACT CLASS AND METHOD
+package ClosedCurve_ver2;
+//develop with inhertance
 abstract public class ClosedCurve {
 	abstract double computeArea();
 
