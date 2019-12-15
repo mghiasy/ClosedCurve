@@ -1,10 +1,14 @@
-package ClosedCurve_ver2;
+package closedcurve_ver4;
 
 public class Rectangle extends ClosedCurve implements Polygon {
 	private double width;
 	private double length;
 	
-	public Rectangle(double width,double length) {
+	public Rectangle(double width,double length) throws IllegalClosedCurveException{
+		if (width <= 0 || length <= 0) {
+			throw new IllegalClosedCurveException("Negative side or zero");
+
+		}
 		this.width=width;
 		this.length=length;
 	}

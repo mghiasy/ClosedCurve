@@ -1,4 +1,4 @@
-package ClosedCurve_ver2;
+package closedcurve_ver4;
 
 import java.util.Arrays;
 
@@ -23,7 +23,10 @@ public final class Triangle extends ClosedCurve implements Polygon {
 	 * Postcondition: Constructor must assign values to height and base so that the
 	 * following is satisfied: height <= base
 	 */
-	public Triangle(double base, double height) {
+	public Triangle(double base, double height) throws IllegalClosedCurveException{
+		if(base <= 0 || height <=0) {
+			throw new IllegalClosedCurveException("Negative side or zero");
+		}
 		if (height <= base) {
 			this.base = base;
 			this.height = height;
